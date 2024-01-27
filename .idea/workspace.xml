@@ -4,21 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1217c57b-2e54-435e-9fe7-3738f93703c8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Habit_Tracker.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/habit_tracker_backend/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/habit_tracker_backend/analyse.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/habit_tracker_backend/db.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/habit_tracker_backend/habit.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/habit_tracker_backend/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/habit_tracker_backend/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/habit_tracker_backend/test_db.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/habit_tracker_backend/test_habit.py" afterDir="false" />
+    <list default="true" id="1217c57b-2e54-435e-9fe7-3738f93703c8" name="Changes" comment="Going to utilize github">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +32,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "settings.editor.selected.configurable": "preferences.keymap"
+    "settings.editor.selected.configurable": "configurable.group.editor"
   }
 }]]></component>
   <component name="SharedIndexes">
@@ -64,6 +51,19 @@
       <option name="presentableId" value="Default" />
       <updated>1706384576058</updated>
     </task>
+    <task id="LOCAL-00001" summary="Going to utilize github">
+      <option name="closed" value="true" />
+      <created>1706385190230</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1706385190230</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Going to utilize github" />
+    <option name="LAST_COMMIT_MESSAGE" value="Going to utilize github" />
   </component>
 </project>
