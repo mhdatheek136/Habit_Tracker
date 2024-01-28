@@ -1,0 +1,138 @@
+from db import get_db
+from prettytable import PrettyTable
+
+def get_all_habits_info(db):
+    """
+    Retrieve information for all habits from the habit_info table.
+
+    Parameters:
+    - db: Database connection.
+
+    Returns:
+    List of tuples containing habit information.
+    """
+    cur = db.cursor()
+    column_names = (("Habit", "Periodicity", "Description", "Creation Date", "Current Streak"), )
+    cur.execute("SELECT * FROM habit_info")
+    rows = cur.fetchall()
+    rows_with_header = column_names + tuple(rows)
+    return rows_with_header
+
+
+def get_all_habits(db):
+    """
+    Retrieve the names of all habits from the habit_info table.
+
+    Parameters:
+    - db: Database connection.
+
+    Returns:
+    List of habit names.
+    """
+    column_names = (("Habit Name"),)
+    cur = db.cursor()
+    cur.execute("SELECT habit FROM habit_info")
+    return cur.fetchall()
+
+
+def get_all_habits_based_on_periodicity(db, periodicity):
+    """
+    Retrieve habits based on a specific periodicity from the habit_info table.
+
+    Parameters:
+    - db: Database connection.
+    - periodicity: Periodicity of habits to retrieve.
+
+    Returns:
+    List of tuples containing habit information.
+    """
+    cur = db.cursor()
+    cur.execute("SELECT * FROM habit_info WHERE periodicity = ?", (periodicity,))
+    rows = cur.fetchall()
+    return rows
+
+
+def get_data_of_single_habit(db, name):
+    """
+    Retrieve information for a specific habit from the habit_info table.
+
+    Parameters:
+    - db: Database connection.
+    - name: Name of the habit.
+
+    Returns:
+    List of tuples containing habit information.
+    """
+    cur = db.cursor()
+    cur.execute("SELECT * FROM habit_info WHERE habit = ?", (name,))
+    return cur.fetchall()
+
+
+def get_longest_streak_for_given_habit(db, name):
+    """
+    Retrieve the longest streak for a specific habit from the event_log table.
+
+    Parameters:
+    - db: Database connection.
+    - name: Name of the habit.
+
+    Returns:
+    Integer representing the longest streak.
+    """
+    cur = db.cursor()
+    cur.execute("SELECT MAX(streak) FROM event_log WHERE habit = ?", (name,))
+    longest_streak = cur.fetchone()
+    return longest_streak[0]
+
+
+def get_longest_streaks_of_all_habits(db):
+    """
+    Retrieve the longest streak for each habit from the event_log table.
+
+    Parameters:
+    - db: Database connection.
+
+    Returns:
+    List of tuples containing the longest streak for each habit.
+    """
+    cur = db.cursor()
+    cur.execute("SELECT habit, MAX(streak) AS max_streak FROM event_log WHERE habit IN (SELECT habit FROM habit_info) GROUP BY habit")
+    return cur.fetchall()
+
+
+def get_event_logs_by_habit(db, name):
+    """
+    Retrieve event logs for a specific habit from the event_log table.
+
+    Parameters:
+    - db: Database connection.
+    - name: Name of the habit.
+
+    Returns:
+    List of tuples containing event log information for the habit.
+    """
+    cur = db.cursor()
+    cur.execute("SELECT * FROM event_log WHERE habit = ?", (name,))
+    return cur.fetchall()
+
+
+def print_tabular(data, db):
+    """
+    Print tabular data.
+
+    Parameters:
+    - data: List of tuples containing tabular data.
+    - db: Database connection.
+    """
+    if not data:
+        print("No data to display.")
+        return
+
+    # Create a PrettyTable instance
+    table = PrettyTable(data[0])
+
+    # Add rows to the table
+    for row in data[1:]:
+        table.add_row(row)
+
+    print(table)
