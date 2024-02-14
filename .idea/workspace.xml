@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1217c57b-2e54-435e-9fe7-3738f93703c8" name="Changes" comment="No change">
-      <change afterPath="$PROJECT_DIR$/helper.py" afterDir="false" />
+    <list default="true" id="1217c57b-2e54-435e-9fe7-3738f93703c8" name="Changes" comment="no change">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/analytics.py" beforeDir="false" afterPath="$PROJECT_DIR$/analytics.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_analytics.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_analytics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,27 +36,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python tests.Python tests for test_analytics.TestAnalytics.test_get_all_habits_info.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_habit.TestHabit.test_add_event.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_habit.TestHabit.test_change_periodicity.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_habit.TestHabit.test_create.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_habit.TestHabit.test_delete.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_habit.TestHabit.test_get_last_update_date.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_habit.TestHabit.test_handle_streak_case_01.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_habit.TestHabit.test_handle_streak_when_last_event_date_None.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_habit.test_create.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_habit.test_delete.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_habit.test_edit_name.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_habit.test_handle_streak_case_01.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_habit.test_handle_streak_case_02.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Python tests for test_analytics.TestAnalytics.test_get_all_habits_info.executor": "Run",
+    "Python tests.Python tests for test_habit.TestHabit.test_add_event.executor": "Run",
+    "Python tests.Python tests for test_habit.TestHabit.test_change_periodicity.executor": "Run",
+    "Python tests.Python tests for test_habit.TestHabit.test_create.executor": "Run",
+    "Python tests.Python tests for test_habit.TestHabit.test_delete.executor": "Run",
+    "Python tests.Python tests for test_habit.TestHabit.test_get_last_update_date.executor": "Run",
+    "Python tests.Python tests for test_habit.TestHabit.test_handle_streak_case_01.executor": "Run",
+    "Python tests.Python tests for test_habit.TestHabit.test_handle_streak_when_last_event_date_None.executor": "Run",
+    "Python tests.Python tests for test_habit.test_create.executor": "Run",
+    "Python tests.Python tests for test_habit.test_delete.executor": "Run",
+    "Python tests.Python tests for test_habit.test_edit_name.executor": "Run",
+    "Python tests.Python tests for test_habit.test_handle_streak_case_01.executor": "Run",
+    "Python tests.Python tests for test_habit.test_handle_streak_case_02.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/MOHAMMED RAFI ATHEEK/PycharmProjects/DLBSEPCP01_E-main",
+    "settings.editor.selected.configurable": "preferences.fileTypes"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Python tests.Python tests for test_analytics.TestAnalytics.test_get_all_habits_info">
     <configuration name="Python tests for test_analytics.TestAnalytics.test_get_all_habits_info" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Habit_Tracker" />
@@ -252,7 +256,39 @@
       <option name="project" value="LOCAL" />
       <updated>1706485745485</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Added Column Names">
+      <option name="closed" value="true" />
+      <created>1706634731633</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1706634731633</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Added helper.py to help main.py">
+      <option name="closed" value="true" />
+      <created>1706634772245</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1706634772245</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Tested tabular print">
+      <option name="closed" value="true" />
+      <created>1706634897284</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1706634897284</updated>
+    </task>
+    <task id="LOCAL-00016" summary="no change">
+      <option name="closed" value="true" />
+      <created>1706634908589</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1706634908589</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -265,6 +301,10 @@
     <MESSAGE value="Wrote unit test for analytics module" />
     <MESSAGE value="Added docstrings and comments" />
     <MESSAGE value="No change" />
-    <option name="LAST_COMMIT_MESSAGE" value="No change" />
+    <MESSAGE value="Added Column Names" />
+    <MESSAGE value="Added helper.py to help main.py" />
+    <MESSAGE value="Tested tabular print" />
+    <MESSAGE value="no change" />
+    <option name="LAST_COMMIT_MESSAGE" value="no change" />
   </component>
 </project>

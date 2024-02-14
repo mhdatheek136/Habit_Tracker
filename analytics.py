@@ -17,7 +17,10 @@ def get_all_habits_info(db):
     cur.execute("SELECT * FROM habit_info")
     rows = cur.fetchall()
     rows_with_header = column_names + tuple(rows)
-    return rows_with_header
+    if len(rows) > 0:
+        return rows_with_header
+    else:
+        raise ValueError("No habit information found; Please add a habit first")
 
 
 def get_all_habits(db):
@@ -35,9 +38,10 @@ def get_all_habits(db):
     cur.execute("SELECT habit FROM habit_info")
     rows = cur.fetchall()
     rows_with_header = column_names + tuple(rows)
-    print(rows_with_header)
-    return rows_with_header
-
+    if len(rows) > 0:
+        return rows_with_header
+    else:
+        raise ValueError("No habit found; Please add a habit first")
 
 def get_all_habits_based_on_periodicity(db, periodicity):
     """
@@ -55,7 +59,10 @@ def get_all_habits_based_on_periodicity(db, periodicity):
     cur.execute("SELECT * FROM habit_info WHERE periodicity = ?", (periodicity,))
     rows = cur.fetchall()
     rows_with_header = column_names + tuple(rows)
-    return rows_with_header
+    if len(rows) > 0:
+        return rows_with_header
+    else:
+        raise ValueError("No habit found with that periodicity.")
 
 
 def get_data_of_single_habit(db, name):
@@ -74,7 +81,10 @@ def get_data_of_single_habit(db, name):
     cur.execute("SELECT * FROM habit_info WHERE habit = ?", (name,))
     rows = cur.fetchall()
     rows_with_header = column_names + tuple(rows)
-    return rows_with_header
+    if len(rows) > 0:
+        return rows_with_header
+    else:
+        raise ValueError("No habit found; Please add a habit first")
 
 
 def get_longest_streak_for_given_habit(db, name):
@@ -94,7 +104,10 @@ def get_longest_streak_for_given_habit(db, name):
     cur.execute("SELECT MAX(streak) FROM event_log WHERE habit = ?", (name,))
     rows = cur.fetchall()
     rows_with_header = column_names + tuple(rows)
-    return rows_with_header
+    if len(rows) > 0:
+        return rows_with_header
+    else:
+        raise ValueError("No habit found; Please add a habit first")
 
 
 def get_longest_streaks_of_all_habits(db):
@@ -112,7 +125,10 @@ def get_longest_streaks_of_all_habits(db):
     cur.execute("SELECT habit, MAX(streak) AS max_streak FROM event_log WHERE habit IN (SELECT habit FROM habit_info) GROUP BY habit")
     rows = cur.fetchall()
     rows_with_header = column_names + tuple(rows)
-    return rows_with_header
+    if len(rows) > 0:
+        return rows_with_header
+    else:
+        raise ValueError("No habit found; Please add a habit first")
 
 
 def get_event_logs_by_habit(db, name):
@@ -131,7 +147,10 @@ def get_event_logs_by_habit(db, name):
     cur.execute("SELECT * FROM event_log WHERE habit = ?", (name,))
     rows = cur.fetchall()
     rows_with_header = column_names + tuple(rows)
-    return rows_with_header
+    if len(rows) > 0:
+        return rows_with_header
+    else:
+        raise ValueError("No check-in event found for given Habit.")
 
 
 def print_tabular(data, db):

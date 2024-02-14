@@ -79,7 +79,7 @@ def is_habit_exists(db, name):
     """
 
     cur = db.cursor()
-    cur.execute("SELECT 1 FROM habit_info WHERE habit = ?", (name, ))
+    cur.execute("SELECT 1 FROM habit_info WHERE habit = ?", (name,))
     return True if cur.fetchone() is not None else False
 
 
@@ -92,7 +92,7 @@ def remove_habit(db, name):
     - name (str): Name of the habit.
     """
     cur = db.cursor()
-    cur.execute("DELETE FROM habit_info WHERE habit = ?", (name, ))
+    cur.execute("DELETE FROM habit_info WHERE habit = ?", (name,))
     db.commit()
 
 
@@ -163,7 +163,7 @@ def get_current_streak(db, name):
     - int: Current streak of the habit.
     """
     cur = db.cursor()
-    cur.execute("SELECT streak FROM habit_info WHERE habit = ?", (name, ))
+    cur.execute("SELECT streak FROM habit_info WHERE habit = ?", (name,))
     current_streak = cur.fetchone()
     return current_streak[0]
 
@@ -209,7 +209,7 @@ def get_last_update_date(db, name):
     - str or None: Date of the last recorded event, or None if no events exist for the habit.
     """
     cur = db.cursor()
-    cur.execute("SELECT event_date FROM event_log WHERE habit = ? ORDER BY event_date DESC LIMIT 1", (name, ))
+    cur.execute("SELECT event_date FROM event_log WHERE habit = ? ORDER BY event_date DESC LIMIT 1", (name,))
     row = cur.fetchone()
     return row[0] if row is not None else None
 
@@ -246,3 +246,19 @@ def get_description(db, name):
     cur.execute("SELECT description FROM habit_info WHERE habit = ?", (name,))
     desc = cur.fetchone()
     return desc[0]
+
+
+def get_all_habits_as_choices(db):
+    """
+    Retrieve a list of unique habit choices from the database.
+
+    Parameters:
+    - db (sqlite3.Connection): SQLite database connection.
+
+    Returns:
+    - list or None: A list of unique habit choices (capitalized), or None if no data is found.
+    """
+    cur = db.cursor()
+    cur.execute("SELECT habit FROM habit_info")
+    data = cur.fetchall()
+    return [i[0].capitalize() for i in set(data)] if len(data) > 0 else None
